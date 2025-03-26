@@ -6,6 +6,7 @@ import pickle
 from sklearn.metrics import accuracy_score 
 from sklearn.ensemble import RandomForestClassifier 
 from sklearn.model_selection import train_test_split
+import os
  
 st.title('Penguin Classifier') 
 
@@ -28,9 +29,12 @@ penguin_file = st.file_uploader('Upload your own penguin data')
 
 if penguin_file is None: 
 
-    rf_pickle = open('random_forest_penguin.pickle', 'rb') 
 
-    map_pickle = open('output_penguin.pickle', 'rb') 
+    cwd = os.getcwd()
+    
+    rf_pickle = open('/Users/joaogoncalves/Desktop/git/streamlit/Getting-Started-with-Streamlit-for-Data-Science/penguin_ml/random_forest_penguin.pickle', 'rb') 
+
+    map_pickle = open('/Users/joaogoncalves/Desktop/git/streamlit/Getting-Started-with-Streamlit-for-Data-Science/penguin_ml/output_penguin.pickle', 'rb') 
 
     rfc = pickle.load(rf_pickle) 
 

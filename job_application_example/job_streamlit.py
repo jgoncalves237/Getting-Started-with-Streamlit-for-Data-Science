@@ -33,11 +33,11 @@ the input airport.' There are three steps here:
 4. Return sorted list of airports Distance
 '''
 
-airport_distance_df = pd.read_csv('airport_location.csv')
+airport_distance_df = pd.read_csv('./airport_location.csv')
 
 with st.echo():
 	#load necessary data
-	airport_distance_df = pd.read_csv('airport_location.csv')
+	airport_distance_df = pd.read_csv('./airport_location.csv')
 
 '''
 From some quick googling, I found that the haversine distance is 
